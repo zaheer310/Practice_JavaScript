@@ -111,14 +111,79 @@
 // console.log(`The double of a number is ${double(5)}`)
 // console.log(`The triple of a number is ${triple(5)}`)
 
-const student ={
-    name:`Alex`,
-    maths: 93,
-    eng:95,
-    phy:97,
-    getAvg() {
-        console.log(`The avgrage of marks is ${(this.maths + this.eng + this.phy)/3}`)
-    }
+// const student ={
+//     name:`Alex`,
+//     maths: 93,
+//     eng:95,
+//     phy:97,
+//     getAvg() {
+//         console.log(`The avgrage of marks is ${(this.maths + this.eng + this.phy)/3}`)
+//     }
+// }
+
+// student.getAvg()
+
+// Array Methods 
+
+// // forEach() Method
+// let arr = [2,3,4,5];
+// arr.forEach(element => {
+//     if(element > 2)
+//         console.log(`Greater than 2 ::${element}`)
+//     else
+//         console.log(`Less than 2 ::${element}`)
+// });
+
+// // Map Method
+// let updatedArray = arr.map(elem => elem >2)
+// console.log(updatedArray)
+
+// // filter Method
+
+// let arr1 = arr.filter(e => e > 2)
+// console.log(arr1)
+
+// let isAllGreater = arr.every(el => el > 2)
+// console.log(isAllGreater)
+
+// let isSomeGreater = arr.some(ele => ele > 2)
+// console.log(isSomeGreater)
+
+// let totalResult = arr.reduce((sum,eleme) => sum*eleme)
+// console.log(totalResult)
+
+// Default parametr 
+function greetUser (name = "User"){
+     console.log(`Good Evening ${name}`)
 }
 
-student.getAvg()
+greetUser()
+greetUser(`Zaheer`)
+
+// Spread Operator
+let num = [ 1,2,3]
+let bigArr = [...num,4,5]
+console.log(bigArr)
+
+// Rest Operator 
+function sum (...nums){
+    //  nums is the array
+    let total = nums.reduce((sum,elem) => sum+elem )
+    console.log(total)
+} 
+sum(1,2,3,4)
+
+// // Array destructuring 
+
+// let fruits = [`Mango`,`Apple`,`Banana`]
+// let [fruit ,d, c] = fruits
+// console.log(fruit , d, c)
+
+// Object Destructuring 
+let obj = {
+    name:`Zaheer`,
+    Roll: 122
+}
+
+let {name , Roll } =  obj
+console.log(name, Roll)
